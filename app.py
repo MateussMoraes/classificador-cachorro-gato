@@ -7,14 +7,6 @@ from PIL import Image
 st.title("Cachorro ou Gato 🐶🐱")
 st.text("Envie uma imagem para saber se é um cachorro ou um gato.")
 
-# Link para o Google Colab
-link = "https://colab.research.google.com/drive/12BNnVJquI6B_PZHd2ukdRtUhyhehzZv2?usp=sharing"
-
-st.text("O código utilizado está disponível no google colab, clique no botão abaixo.")
-# Botão
-if st.button("Abrir Google Colab"):
-    webbrowser.open_new_tab(link)
-
 @st.cache_resource
 def load_trained_model():
     return load_model('modelo_CatsAndDogs.h5')
